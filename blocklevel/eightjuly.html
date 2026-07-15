@@ -1,0 +1,26 @@
+<html>
+<html>
+<head>
+    <title>Changing css with Js code</title>
+    <style>
+        #mydiv{
+            height: 400px;
+            width: 500px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv" class="Divclass"></div> <br>
+    <input type="submit" value="chnage Colour" onclick="changeColor()">
+
+    <script>
+        function changeColor(){
+            document.getElementById("myDiv").style.backgroundColor="red";
+             document.getElementById("myDiv").style.height="200px";
+              document.getElementById("myDiv").style.width="200px";
+               document.getElementById("myDiv").style.borderRadius="50%";
+        }
+    </script>
+</body>
+</html>

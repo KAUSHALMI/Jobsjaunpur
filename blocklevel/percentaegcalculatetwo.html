@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f5f5f5;
+        }
+
+        .container{
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            width: 320px;
+            text-align: center;
+        }
+
+        h1{
+            margin-bottom: 20px;
+        }
+
+        label{
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #999;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .buttons{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button{
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: green;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: darkgreen;
+        }
+
+        #result{
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Percentage Calculator</h1>
+
+    <label>Number</label>
+    <input type="number" id="wholenumber" placeholder="Enter Number">
+
+    <label>Percentage (%)</label>
+    <input type="number" id="percentage" placeholder="Enter Percentage">
+
+    <div class="buttons">
+        <button id="calculate">Calculate</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <p id="result"></p>
+
+</div>
+
+<script>
+
+document.getElementById("calculate").addEventListener("click", function(){
+
+    let wholenumber = Number(document.getElementById("wholenumber").value);
+    let percentage = Number(document.getElementById("percentage").value);
+
+    if(wholenumber === 0 || percentage === 0){
+        document.getElementById("result").innerHTML = "Please enter valid values.";
+        return;
+    }
+
+    let result = (wholenumber * percentage) / 100;
+
+    document.getElementById("result").innerHTML =
+    percentage + "% of " + wholenumber + " = <br>" + result;
+
+});
+
+document.getElementById("reset").addEventListener("click", function(){
+
+    document.getElementById("wholenumber").value = "";
+    document.getElementById("percentage").value = "";
+    document.getElementById("result").innerHTML = "";
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<html>
+<head>
+    <title> Percentage Calculater</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    h1{
+        font-family:arial;
+        color: black;
+    }
+    .main{
+        background: white;
+        display: inline-block;
+        margin: 8px 0;
+        padding: 10px 10px;
+    }
+</style>
+<body>
+    <div class="main">
+        <h1>Percentage Calculater</h1>
+        <label for="" class="inputfield">number</label><br>
+        <input type="number" class="inputfield" 
+        placeholder="Enter number" id="number"><br><br>
+        <label for="" class="inputfield">Percentage(%)</label><br>
+        <input type="number" class="inputfield" 
+        placeholder="Enter percentage " id="Percentage"><br><br>
+        <input type="submit" value="Calculate Interest" onclick="Calculateinterest()">
+    </div>
+
+        <script>
+    function Calculateinterest(){
+    var wholenumber=parseInt(document.getElementById("wholenumber").value);
+    var Percentage=parseInt(document.getElementById("Percentage").value);
+    let Percentage=wholenumber/100*Percentage;
+    alert("Your percentage is="+Percentage);
+    }
+</script>
+</body>
+</html>

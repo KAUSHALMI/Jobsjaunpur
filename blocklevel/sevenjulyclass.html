@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="enter number1" id="number1"><br><br>
+    <input type="number" placeholder="enter number2" id="number2"><br><br>
+    <input type="submit" name="add" value="add" onclick="add()">
+    <input type="submit" name="sub" value="sub" onclick="sub()">
+     <input type="submit" name="add" value="multply" onclick="multply()">
+     <input type="submit" name="add" value="Dived" onclick="dived()">
+     <input type="submit" name="add" value="Modules" onclick="Modules()">
+
+    <p id="result"></p>
+    <script>
+        function add(){
+            let number1=parseInt(document.getElementById("number1").value);
+            let number2=parseInt(document.getElementById("number2").value);
+            document.getElementById("result").innerHTML=number1+number2;
+        }
+        function sub(){
+            let number1=parseInt(document.getElementById("number1").value);
+            let number2=parseInt(document.getElementById("number2").value);
+            document.getElementById("result").innerHTML=number1-number2;
+        }
+        function multply(){
+            let number1=parseInt(document.getElementById("number1").value);
+            let number2=parseInt(document.getElementById("number2").value);
+            document.getElementById("result").innerHTML=number1*number2;
+        }
+        function Dived(){
+            let number1=parseInt(document.getElementById("number1").value);
+            let number2=parseInt(document.getElementById("number2").value);
+            document.getElementById("result").innerHTML=number1/number2;
+        }
+        function Modules(){
+            let number1=parseInt(document.getElementById("number1").value);
+            let number2=parseInt(document.getElementById("number2").value);
+            document.getElementById("result").innerHTML=number1%number2;
+        }
+
+    </script>
+
+    
+</body>
+</html>

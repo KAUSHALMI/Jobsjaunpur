@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Button</title>
+</head>
+<body>
+    <head>
+    <style>
+        body{
+            position: relative;
+        }
+        .myBtn{
+            height: 100px;
+            width: 200px;
+            background-color: green;
+            color: white;
+            border-radius: 20px;
+            position: relative;
+            left: 20px;
+            top: 40px;
+        }
+        .myBtn:hover{
+            background-color: lightgreen;
+            color: red;
+        }
+    </style>
+    </head>
+    <body>
+        <input type="submit" id="btn" class="myBtn" onmouseover="chnageButtonPosition()" value="pakad ke dikhao">
+        <script>
+            function chnageButtonPosition(){
+                let Button=document.getElementById("btn");
+                let x=Math.random()*500;
+                 let y=Math.random()*100;
+                Button.style.left=x+"px";
+                Button.style.top=y+"px";
+            }
+        </script>
+    </body>
+</body>
+</html>

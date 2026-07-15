@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout Design</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:white;
+}
+
+.container{
+    width:900px;
+    height:600px;
+    margin:20px auto;
+    border:2px solid black;
+
+    display:grid;
+    grid-template-columns:200px 1fr 200px;
+    grid-template-rows:100px 1fr 80px;
+
+    grid-template-areas:
+    "header header header"
+    "left body right"
+    "footer footer footer";
+}
+
+.header{
+    grid-area:header;
+    background:aqua;
+    border:1px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    font-weight:bold;
+}
+
+.left{
+    grid-area:left;
+    background:lightgray;
+    border:1px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    font-weight:bold;
+}
+
+.body{
+    grid-area:body;
+    background:white;
+    border:1px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    font-weight:bold;
+}
+
+.right{
+    grid-area:right;
+    background:khaki;
+    border:1px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    font-weight:bold;
+}
+
+.footer{
+    grid-area:footer;
+    background:lightgreen;
+    border:1px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">Header</div>
+
+    <div class="left">Left</div>
+
+    <div class="body">Body</div>
+
+    <div class="right">Right</div>
+
+    <div class="footer">Footer</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display & Visibility Task</title>
+  <style>
+    /* Remove default list styling like bullets and padding */
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* 1. Convert list items into a horizontal nav bar using inline-block */
+    li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    /* Style the links nicely */
+    a {
+      text-decoration: underline;
+      color: blue;
+      font-family: sans-serif;
+    }
+
+    /* 2. Hide one item entirely with display: none */
+    .hidden-link {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li class="hidden-link"><a href="#">Hidden Item</a></li> <li><a href="#">Contact</a></li>
+  </ul>
+
+</body>
+</html>

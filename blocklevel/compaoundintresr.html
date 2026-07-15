@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Compound intresest Calculater</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0%;
+        background-color:pink;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        margin: 10px auto;
+    }
+    .main{
+        height: 800px;
+        width: 1200px;
+        margin: auto;
+        padding:20px;
+        background-color:pink;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    .submit{
+        height: 30px;
+        width: 300px;
+        margin: auto;
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+    }
+</style>
+<body>
+    
+    <div class="main">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl-TN0ZTBvw3aSRFtMs0A-lEFUj14O_gtCtnQURTWUISOZu2Wlk75P3o_w&s=10" alt="logo" class="logo">
+        <h1>Compound intresest Calculator</h1>
+        <label for="" class="inputfield">Principal Ammount:</label><br>
+        <input type="number" class="inputfield"
+        placeholder="Enter Principle Ammount" id="Principle"><br><br>
+        <label for="" class="inputfield">Interest Rate (%): </label><br>
+        <input type="number" class="inputfield"
+        placeholder="Enter intresest Rate (%)" id="intrest"><br><br>
+        <label for="" class="inputfield">Numeber of Years(YY):</label><br>
+        <input type="number" class="inputfield"
+        placeholder="Enter Number Of Years" id="Year"><br><br>
+        <label for="" class="inputfield">Compounding Frequency:</label><br>
+        <input type="number" class="inputfield"
+        placeholder="Enter Principle Ammount" id="Compounding"><br><br>
+        <input class="submit" type="submit" value="Calculate">
+    </div>
+    <script>
+        function Compoundcalculate(){
+            let Principle=parseInt(document.getElementById("Principle").value);
+            let intrest=parseInt(document.getElementById("intrest").value);
+            let Year=parseInt(document.getElementById("Year").value);
+            let Compounding=parseInt(document.getElementById("Compounding").value);
+            let amount = p * Math.pow((1 + (r / (100 * n))), (n * t));
+            let interest = amount - p;
+
+            document.getElementById("result").innerHTML =
+            "Compound Interest = ₹" + interest.toFixed(2) +
+             "<br>Total Amount = ₹" + amount.toFixed(2);
+
+            alert("Compound Interest = ₹" + interest.toFixed(2));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principle Amout Callculator</title>
+</head>
+<style>
+    .main{
+        margin: 20px;
+        padding: 20px;
+        background-color: grey;
+        height: 200px;
+        width: 400px;
+        color: black;
+        text-align: center;
+        border: 50px;
+
+    }
+</style>
+<body>
+    <div class="main">
+        <label for="" class="inputfield">Principle Ammount</label>
+        <input type="number" class="inputfield" 
+        placeholder="Enter Principle Ammount" id="Principle"><br><br>
+        <label for="" class="inputfield">Duration</label>
+        <input type="number" class="inputfield" 
+        placeholder="Enter Duration" id="Duration"><br><br>
+        <label for="" class="inputfield">Duration</label>
+        <input type="number" class="inputfield" 
+        placeholder="Enter Rate of interest" id="interest"><br><br>
+        <input type="submit" value="Calculate Interest" onclick="Calculateinterest()">
+    </div>
+
+    <script>
+        function Calculateinterest(){
+            let Principle=parseInt(document.getElementById("Principle").value);
+            let duration=parseInt(document.getElementById("Duration").value);
+            let interest=parseInt(document.getElementById("interest").value);
+            let multply=Principle*duration*interest;
+            let simpleinterest=multply/100;
+            alert("Your simpal intrest is="+simpleinterest);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Celsius to Fehreneit</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Celsius To Fehreneit</h1>
+        <label for="" class="inputfield">Celsius:</label><br>
+        <input type="number" class="inputfield" 
+        placeholder="Enter Celsius" id="Celsius"><br><br>
+        <label for="" class="inputfield">Fehreneit:</label><br>
+        <input type="number" class="inputfield" 
+        placeholder="Enter Fehreneit" id="Fehreneit"><br><br>
+        <input type="submit" value="Conver" onclick="Celsius">
+    </div>
+</body>
+<script>
+    function Celsius(){
+    var Celsius=parseInt(document.getElementById("Celsius").value);
+    var Fehreneit=parseInt(document.getElementById("Fehreneit").value);
+    let f=Celsius*9/5+32;
+    alert("Your Fehreneit is="+Fehreneit);
+    }
+</script>
+</html>
